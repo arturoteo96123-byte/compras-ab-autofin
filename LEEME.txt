@@ -1,0 +1,19 @@
+COMPRAS A&B AUTOFIN — PWA
+
+Este paquete incluye:
+- index.html
+- manifest.webmanifest
+- service-worker.js
+- iconos de la aplicación
+
+IMPORTANTE:
+Para instalarla como app en iPhone o Android, debe abrirse desde una dirección HTTPS.
+No se puede instalar correctamente como PWA directamente desde un archivo adjunto de correo.
+
+Cómo publicarla:
+1. Sube toda esta carpeta a Netlify, Vercel, GitHub Pages o al servidor de Grupo Autofin.
+2. Abre la dirección web desde Safari o Chrome.
+3. iPhone: Compartir > Agregar a pantalla de inicio.
+4. Android: Menú de Chrome > Instalar aplicación.
+
+El catálogo funciona sin conexión después de la primera apertura.
