@@ -1,0 +1,6 @@
+1. En GitHub elimina los archivos anteriores del repositorio.
+2. Sube index.html, manifest.webmanifest, service-worker.js e icon.svg.
+3. Haz Commit changes.
+4. Espera a que GitHub Pages termine.
+5. Abre la liga agregando ?v=20260803 al final.
+Esta versión elimina la caché anterior para que el cambio sí aparezca.

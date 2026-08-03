@@ -1,7 +1,7 @@
 {
-  "name": "Compras A&B Autofin 2.0",
+  "name": "Compras A&B Autofin",
   "short_name": "Compras A&B",
-  "start_url": "./index.html",
+  "start_url": "./index.html?v=20260803",
   "display": "standalone",
   "background_color": "#f1f5f8",
   "theme_color": "#173f67",
