@@ -1,0 +1,1 @@
+Sube a GitHub index.html, manifest.webmanifest, service-worker.js e icon.svg. Después abre la app con ?v=20260805.
