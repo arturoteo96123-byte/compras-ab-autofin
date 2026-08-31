@@ -1,1 +1,1 @@
-Sube a GitHub index.html, manifest.webmanifest, service-worker.js e icon.svg. Después abre la app con ?v=20260805.
+Sube a GitHub todos los archivos de esta carpeta y reemplaza los que tengan el mismo nombre. No agregues parámetros a la dirección de la app. Abre GitHub Pages una vez con internet para guardar la versión offline.

@@ -1,6 +1,9 @@
-1. En GitHub elimina los archivos anteriores del repositorio.
-2. Sube index.html, manifest.webmanifest, service-worker.js e icon.svg.
-3. Haz Commit changes.
-4. Espera a que GitHub Pages termine.
-5. Abre la liga agregando ?v=20260803 al final.
-Esta versión elimina la caché anterior para que el cambio sí aparezca.
+1. Descomprime este ZIP en tu computadora.
+2. En GitHub, abre el repositorio compras-ab-autofin.
+3. Elige Add file y después Upload files.
+4. Arrastra todos los archivos que están dentro de la carpeta descomprimida.
+5. Confirma que GitHub indique que reemplazará los archivos con el mismo nombre.
+6. Pulsa Commit changes y espera a que GitHub Pages termine de publicar.
+7. Abre la liga normal de la app con internet una vez; después podrá abrir offline.
+
+No borres primero los archivos del repositorio y no agregues ?v= a la dirección.

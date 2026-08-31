@@ -57,5 +57,11 @@ close.onclick=()=>dialog.close();dialog.onclick=e=>{if(e.target===dialog)dialog.
 function n(s){return s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase()}
 function askQ(){const qq=n(q.value.trim());if(!qq){ans.textContent='Escribe una pregunta.';return}const words=qq.replace(/[¿?.,]/g,' ').split(/\s+/).filter(w=>w.length>2&&!['cuanto','compramos','compro','gastamos','gasto','precio','promedio','proveedor','cual','dame','total'].includes(w));const ms=D.products.filter(p=>words.every(w=>n(p.descripcion).includes(w))).slice(0,20);if(!ms.length){ans.textContent='No encontré coincidencias. Prueba con una palabra simple.';return}const qty=ms.reduce((a,p)=>a+p.unidades_total,0),sp=ms.reduce((a,p)=>a+p.importe_total,0),av=qty?sp/qty:0;const prov=[...new Set(ms.flatMap(p=>p.proveedores))].slice(0,5);ans.textContent=`Coincidencias: ${ms.length}\nCantidad total: ${num.format(qty)}\nGasto total: ${money.format(sp)}\nPrecio promedio: ${money.format(av)}\nProveedor(es): ${prov.length?prov.join(', '):'No disponible'}`}
 ask.onclick=askQ;q.addEventListener('keydown',e=>{if(e.key==='Enter')askQ()});
-if('serviceWorker' in navigator)addEventListener('load',async()=>{const regs=await navigator.serviceWorker.getRegistrations();for(const r of regs)await r.unregister();});
+if('serviceWorker' in navigator){
+  addEventListener('load',()=>{
+    navigator.serviceWorker.register('./service-worker.js',{scope:'./'}).catch(error=>{
+      console.warn('No se pudo activar el modo offline:',error);
+    });
+  });
+}
 </script></body></html>
