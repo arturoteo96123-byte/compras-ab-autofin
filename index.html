@@ -22,13 +22,13 @@ main{max-width:1200px;margin:auto;padding:13px}section{display:none}section.acti
 dialog{width:min(96vw,780px);max-height:92vh;border:0;border-radius:20px;padding:0}dialog::backdrop{background:#0009}.mh{background:linear-gradient(135deg,var(--b),var(--b2));color:white;padding:17px 55px 17px 17px;position:relative}.close{position:absolute;right:12px;top:12px;border:0;border-radius:50%;width:38px;height:38px;background:#ffffff33;color:white;font-size:22px}.mb{padding:15px}
 @media(min-width:700px){.metrics{grid-template-columns:repeat(4,1fr)}.controls{grid-template-columns:2fr 1fr 1fr}.grid{grid-template-columns:repeat(2,1fr)}}@media(min-width:1000px){.grid{grid-template-columns:repeat(3,1fr)}}
 </style></head><body>
-<header><div class="brand"><h1>Compras A&B Autofin</h1><span class="ver">Actualizado 05/08/2026</span></div>
+<header><div class="brand"><h1>Compras A&B Autofin</h1><span class="ver">Actualizado 31/08/2026</span></div>
 <nav><button class="active" data-tab="dashboard">Dashboard</button><button data-tab="catalogo">Catálogo</button><button data-tab="proveedores">Proveedores</button><button data-tab="precios">Variación</button><button data-tab="auditoria">Auditoría</button><button data-tab="preguntas">Pregúntale</button></nav></header>
 <main>
 <section id="dashboard" class="active"><div class="metrics">
-<div class="metric"><b>6,306</b><span>Productos únicos</span></div>
-<div class="metric"><b>$209,360,639</b><span>Gasto enero–julio</span></div>
-<div class="metric"><b>446</b><span>Proveedores</span></div>
+<div class="metric"><b>6,634</b><span>Productos únicos</span></div>
+<div class="metric"><b>$233,038,041</b><span>Gasto enero–agosto</span></div>
+<div class="metric"><b>459</b><span>Proveedores</span></div>
 <div class="metric"><b>12</b><span>Categorías</span></div></div>
 <div class="panel status"><h2>✓ Reporte validado</h2><div>Los totales ya cuadran. Solo existen diferencias de centavos por redondeo.</div></div>
 <div class="panel"><h2>Top 10 productos por gasto</h2><div id="tp"></div></div>
@@ -37,7 +37,7 @@ dialog{width:min(96vw,780px);max-height:92vh;border:0;border-radius:20px;padding
 <section id="proveedores"><div class="panel"><h2>Proveedores</h2><div class="table-wrap"><table><thead><tr><th>Proveedor</th><th>Registros</th><th>Gasto</th></tr></thead><tbody id="sup"></tbody></table></div></div></section>
 <section id="precios"><div class="panel"><h2>Variación de precios</h2><div class="table-wrap"><table><thead><tr><th>Producto</th><th>Periodo</th><th>Inicial</th><th>Final</th><th>Variación</th></tr></thead><tbody id="pm"></tbody></table></div></div></section>
 <section id="auditoria"><div class="panel"><h2>Auditoría del reporte</h2>
-<div class="metrics"><div class="metric"><b>7,416</b><span>Registros revisados</span></div><div class="metric"><b>$209,360,638.90</b><span>Total del resumen</span></div><div class="metric"><b>$209,360,639.07</b><span>Total por artículo</span></div><div class="metric"><b>$0.17</b><span>Diferencia de redondeo</span></div></div>
+<div class="metrics"><div class="metric"><b>7,819</b><span>Registros revisados</span></div><div class="metric"><b>$233,038,041.10</b><span>Total del resumen</span></div><div class="metric"><b>$233,038,041.20</b><span>Total por artículo</span></div><div class="metric"><b>$0.10</b><span>Diferencia de redondeo</span></div></div>
 <div class="status panel"><h2>Estado: APROBADO</h2><div>No se detectaron diferencias materiales. Las variaciones son únicamente por redondeos de centavos.</div></div></section>
 <section id="preguntas"><div class="panel"><h2>Pregúntale a Compras</h2><div class="ask"><input id="q" placeholder="Ejemplo: ¿Cuánto compramos de naranja?"><button id="ask">Preguntar</button></div><div class="answer" id="ans">Escribe una pregunta sobre un producto.</div></div></section>
 </main>

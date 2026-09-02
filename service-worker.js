@@ -1,4 +1,4 @@
-const CACHE_NAME = 'compras-ab-autofin-v20260901-agosto-corregido';
+const CACHE_NAME = 'compras-ab-autofin-v20260902-dashboard-corregido';
 const APP_SHELL = ['./', './index.html', './manifest.webmanifest', './icon.svg'];
 
 self.addEventListener('install', event => {
