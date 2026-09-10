@@ -21,7 +21,49 @@ main{max-width:1200px;margin:auto;padding:13px}section{display:none}section.acti
 .ask{display:flex;gap:8px}.ask input{flex:1}.ask button{border:0;border-radius:12px;background:var(--g);color:#fff;font-weight:700;padding:0 16px}.answer{margin-top:12px;background:#eef7f0;border-left:4px solid var(--g);padding:12px;border-radius:10px;white-space:pre-line}
 dialog{width:min(96vw,780px);max-height:92vh;border:0;border-radius:20px;padding:0}dialog::backdrop{background:#0009}.mh{background:linear-gradient(135deg,var(--b),var(--b2));color:white;padding:17px 55px 17px 17px;position:relative}.close{position:absolute;right:12px;top:12px;border:0;border-radius:50%;width:38px;height:38px;background:#ffffff33;color:white;font-size:22px}.mb{padding:15px}
 @media(min-width:700px){.metrics{grid-template-columns:repeat(4,1fr)}.controls{grid-template-columns:2fr 1fr 1fr}.grid{grid-template-columns:repeat(2,1fr)}}@media(min-width:1000px){.grid{grid-template-columns:repeat(3,1fr)}}
-</style></head><body>
+</style><script>// Independiente de las funciones del catálogo: un error de interfaz no impide registrar offline.
+document.addEventListener('DOMContentLoaded', () => {
+  const box = document.createElement('div');
+  box.id = 'offline-status'; box.setAttribute('role', 'status');
+  box.style.cssText = 'padding:8px 16px;background:#eaf1f7;color:#173f67;font:14px system-ui';
+  const label = document.createElement('span');
+  const button = document.createElement('button');
+  button.textContent = 'Actualizar'; button.style.marginLeft = '12px';
+  button.onclick = () => location.reload();
+  box.append(label, button); document.querySelector('header').after(box);
+  let ready = false;
+  const cached = !!document.querySelector('meta[name="offline-copy"]');
+  function show() {
+    label.textContent = !navigator.onLine
+      ? (ready ? 'Sin conexión · usando la copia guardada.' : 'Sin conexión · guardado offline pendiente de confirmar.')
+      : cached ? 'Usando una copia guardada · pulsa Actualizar para consultar la versión en línea.'
+      : ready ? 'Lista para usar sin conexión · datos de esta versión guardados.'
+      : 'Preparando el uso sin conexión… mantén esta página abierta.';
+  }
+  show(); addEventListener('online', show); addEventListener('offline', show);
+  if (!('serviceWorker' in navigator) || !isSecureContext) {
+    label.textContent = 'No se pudo activar offline. Abre la dirección HTTPS de GitHub Pages en Safari o Chrome.';
+    return;
+  }
+  function check() {
+    if (!navigator.serviceWorker.controller) return;
+    const channel = new MessageChannel();
+    channel.port1.onmessage = e => {ready = !!e.data.ready; show(); channel.port1.close();};
+    navigator.serviceWorker.controller.postMessage({type:'OFFLINE_STATUS'}, [channel.port2]);
+  }
+  navigator.serviceWorker.addEventListener('controllerchange', check);
+  navigator.serviceWorker.register('./service-worker.js', {scope:'./', updateViaCache:'none'})
+    .then(reg => {
+      const watch = worker => {
+        if (worker) worker.addEventListener('statechange', () => {
+          if (worker.state === 'redundant' && !ready) label.textContent = 'No se completó el guardado offline. Con internet, pulsa Actualizar para reintentar.';
+        });
+      };
+      watch(reg.installing); reg.addEventListener('updatefound', () => watch(reg.installing));
+      check(); navigator.serviceWorker.ready.then(check);
+    }).catch(() => {label.textContent = 'No se pudo activar offline. Con internet, pulsa Actualizar para reintentar.';});
+});
+</script></head><body>
 <header><div class="brand"><h1>Compras A&B Autofin</h1><span class="ver">Actualizado 31/08/2026</span></div>
 <nav><button class="active" data-tab="dashboard">Dashboard</button><button data-tab="catalogo">Catálogo</button><button data-tab="proveedores">Proveedores</button><button data-tab="precios">Variación</button><button data-tab="auditoria">Auditoría</button><button data-tab="preguntas">Pregúntale</button></nav></header>
 <main>
@@ -53,15 +95,8 @@ function render(){const qq=search.value.toLowerCase(),cat=category.value,hot=hot
 sup.innerHTML=D.topSuppliers.map(s=>`<tr><td>${s.proveedor}</td><td>${s.registros}</td><td>${money.format(s.gasto)}</td></tr>`).join('');
 pm.innerHTML=D.priceMoves.map(x=>`<tr><td>${x.descripcion}</td><td>${x.mes_inicial}–${x.mes_final}</td><td>${money.format(x.inicial)}</td><td>${money.format(x.final)}</td><td>${(x.variacion*100).toFixed(1)}%</td></tr>`).join('');
 function openP(p){mt.textContent=p.descripcion;ms.textContent=`Artículo ${p.articulo} · ${p.unidad||'Sin unidad'}`;mb.innerHTML=`<div class="metrics"><div class="metric"><b>${num.format(p.unidades_total)}</b><span>Cantidad</span></div><div class="metric"><b>${money.format(p.importe_total)}</b><span>Gasto</span></div><div class="metric"><b>${money.format(p.costo_promedio)}</b><span>Precio promedio</span></div></div><div class="table-wrap"><table><thead><tr><th>Mes</th><th>Cantidad</th><th>Importe</th><th>Precio</th></tr></thead><tbody>${D.months.map((m,i)=>`<tr><td>${m}</td><td>${num.format(p.unidades[i])}</td><td>${money.format(p.importes[i])}</td><td>${money.format(p.unidades[i]?p.importes[i]/p.unidades[i]:0)}</td></tr>`).join('')}</tbody></table></div><p><b>Proveedor(es):</b><br>${p.proveedores.length?p.proveedores.join('<br>'):'No disponible'}</p>`;dialog.showModal()}
-close.onclick=()=>dialog.close();dialog.onclick=e=>{if(e.target===dialog)dialog.close()};
+document.getElementById('close').onclick=()=>dialog.close();dialog.onclick=e=>{if(e.target===dialog)dialog.close()};
 function n(s){return s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase()}
 function askQ(){const qq=n(q.value.trim());if(!qq){ans.textContent='Escribe una pregunta.';return}const words=qq.replace(/[¿?.,]/g,' ').split(/\s+/).filter(w=>w.length>2&&!['cuanto','compramos','compro','gastamos','gasto','precio','promedio','proveedor','cual','dame','total'].includes(w));const ms=D.products.filter(p=>words.every(w=>n(p.descripcion).includes(w))).slice(0,20);if(!ms.length){ans.textContent='No encontré coincidencias. Prueba con una palabra simple.';return}const qty=ms.reduce((a,p)=>a+p.unidades_total,0),sp=ms.reduce((a,p)=>a+p.importe_total,0),av=qty?sp/qty:0;const prov=[...new Set(ms.flatMap(p=>p.proveedores))].slice(0,5);ans.textContent=`Coincidencias: ${ms.length}\nCantidad total: ${num.format(qty)}\nGasto total: ${money.format(sp)}\nPrecio promedio: ${money.format(av)}\nProveedor(es): ${prov.length?prov.join(', '):'No disponible'}`}
 ask.onclick=askQ;q.addEventListener('keydown',e=>{if(e.key==='Enter')askQ()});
-if('serviceWorker' in navigator){
-  addEventListener('load',()=>{
-    navigator.serviceWorker.register('./service-worker.js',{scope:'./'}).catch(error=>{
-      console.warn('No se pudo activar el modo offline:',error);
-    });
-  });
-}
 </script></body></html>
