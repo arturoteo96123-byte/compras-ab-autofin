@@ -1,0 +1,759 @@
+{
+  "cutoff": "30 de septiembre de 2026",
+  "sourceRows": 8267,
+  "sourceSheetCount": 22,
+  "codes": 6978,
+  "productUnitKeys": 6981,
+  "newCodes": 344,
+  "sourceAmountsHaveCentPrecision": true,
+  "allProductHotelMonthlyTotalsMatch": true,
+  "violations": [],
+  "monthlyTotal": 252518561.75,
+  "productTotal": 252518561.75,
+  "supplierAssociatedTotal": 252518561.75,
+  "summaryTotal": 252518561.44,
+  "summaryMonthlyTotal": 252518561.34,
+  "september": 19480520.39,
+  "septemberSummary": 19480520.35,
+  "supplierLabels": 480,
+  "unknownUnits": 150,
+  "unknownSupplierRows": 6,
+  "errorsWithin": [
+    {
+      "sheet": "PRINCESS_201_BEBIDAS",
+      "ref": "AW85",
+      "error": "#N/A"
+    },
+    {
+      "sheet": "PRINCESS_503_MANTENIMIENTO",
+      "ref": "AW6",
+      "error": "#N/A"
+    },
+    {
+      "sheet": "PRINCESS_503_MANTENIMIENTO",
+      "ref": "AW7",
+      "error": "#N/A"
+    },
+    {
+      "sheet": "PRINCESS_503_MANTENIMIENTO",
+      "ref": "AW264",
+      "error": "#N/A"
+    },
+    {
+      "sheet": "PRINCESS_503_MANTENIMIENTO",
+      "ref": "AW1410",
+      "error": "#N/A"
+    }
+  ],
+  "source": {
+    "name": "PRINCESS_PALACIO_COMPRAS_2026_09_V2.xlsx",
+    "sha256": "3ae0bdf111c91718f099ca3981dd496f5ff87f175aeaf75e80b93c9af61f9337",
+    "periodCells": "RESUMEN_COMPRAS!C3:E3",
+    "summaryCells": [
+      "RESUMEN_COMPRAS!L17",
+      "RESUMEN_COMPRAS!D65",
+      "RESUMEN_COMPRAS!D61"
+    ],
+    "detailColumns": "C artículo; A unidad; E:M cantidades enero–septiembre; V:AD importes enero–septiembre; AW último proveedor",
+    "readOnly": true
+  },
+  "history": {
+    "cutoff": "31 de agosto de 2026",
+    "sha256": "32d9360d8dc9bc069f2ad511c4cee5d40fe0908ea1d41aa2417616b2c2801314",
+    "embeddedSHA256": "32d9360d8dc9bc069f2ad511c4cee5d40fe0908ea1d41aa2417616b2c2801314",
+    "identical": true,
+    "articleMonthAmountsAndQuantitiesUnchanged": true
+  },
+  "outputData": {
+    "sha256": "0baf2a3161b06520177660f3305ad48f6a4946a7f2d7af7ddfcfa0fb37698f86",
+    "matchesPreparedData": true,
+    "basis": "Suma en centavos del detalle mensual; sin ajustes para igualar controles",
+    "monthlyAmounts": [
+      {
+        "month": "ENERO",
+        "amount": 23935322.65
+      },
+      {
+        "month": "FEBRERO",
+        "amount": 21016430.32
+      },
+      {
+        "month": "MARZO",
+        "amount": 27929580.43
+      },
+      {
+        "month": "ABRIL",
+        "amount": 53186057.76
+      },
+      {
+        "month": "MAYO",
+        "amount": 24964130.71
+      },
+      {
+        "month": "JUNIO",
+        "amount": 26542503.55
+      },
+      {
+        "month": "JULIO",
+        "amount": 25615682.93
+      },
+      {
+        "month": "AGOSTO",
+        "amount": 29848333.01
+      },
+      {
+        "month": "SEPTIEMBRE",
+        "amount": 19480520.39
+      }
+    ]
+  },
+  "exceptions": {
+    "status": "Conciliado con diferencias documentadas",
+    "articleChanges": 0,
+    "newArticleCodes": 344,
+    "unknownUnits": 150,
+    "unknownSupplierRows": 6,
+    "unknownSupplierAmount": -226089.38,
+    "carriedUnits": [
+      {
+        "sheet": "PRINCESS_103_FRUTAS_VERDURAS",
+        "row": 329,
+        "articulo": "1232",
+        "unit": "GAL"
+      },
+      {
+        "sheet": "PRINCESS_103_FRUTAS_VERDURAS",
+        "row": 330,
+        "articulo": "1357",
+        "unit": "KGR"
+      },
+      {
+        "sheet": "PRINCESS_103_FRUTAS_VERDURAS",
+        "row": 331,
+        "articulo": "1376",
+        "unit": "KGR"
+      },
+      {
+        "sheet": "PALACIO_403_PROD QUIMICOS",
+        "row": 28,
+        "articulo": "60137",
+        "unit": "PZA"
+      }
+    ],
+    "sourceErrorCells": [
+      {
+        "sheet": "PRINCESS_102_CARNES_MARISCOS",
+        "ref": "A596",
+        "error": "#N/A"
+      },
+      {
+        "sheet": "PALACIO_102_CARNES_MARISCO",
+        "ref": "A596",
+        "error": "#N/A"
+      },
+      {
+        "sheet": "PRINCESS_103_FRUTAS_VERDURAS",
+        "ref": "A596",
+        "error": "#N/A"
+      },
+      {
+        "sheet": "PALACIO_103_FRUTAS_VERDURAS",
+        "ref": "A596",
+        "error": "#N/A"
+      },
+      {
+        "sheet": "PRINCESS_201_BEBIDAS",
+        "ref": "AW85",
+        "error": "#N/A"
+      },
+      {
+        "sheet": "PRINCESS_201_BEBIDAS",
+        "ref": "A596",
+        "error": "#N/A"
+      },
+      {
+        "sheet": "PALACIO_201_BEBIDAS",
+        "ref": "A596",
+        "error": "#N/A"
+      },
+      {
+        "sheet": "PRINCESS_302_PAPELERIA",
+        "ref": "A596",
+        "error": "#N/A"
+      },
+      {
+        "sheet": "PALACIO_302_PAPELERIA",
+        "ref": "A596",
+        "error": "#N/A"
+      },
+      {
+        "sheet": "PALACIO_401_SUMINISTROS",
+        "ref": "A596",
+        "error": "#N/A"
+      },
+      {
+        "sheet": "PRINCESS_403_PROD QUIMICOS",
+        "ref": "A596",
+        "error": "#N/A"
+      },
+      {
+        "sheet": "PALACIO_403_PROD QUIMICOS",
+        "ref": "A596",
+        "error": "#N/A"
+      },
+      {
+        "sheet": "PRINCESS_503_MANTENIMIENTO",
+        "ref": "AW6",
+        "error": "#N/A"
+      },
+      {
+        "sheet": "PRINCESS_503_MANTENIMIENTO",
+        "ref": "AW7",
+        "error": "#N/A"
+      },
+      {
+        "sheet": "PRINCESS_503_MANTENIMIENTO",
+        "ref": "AW264",
+        "error": "#N/A"
+      },
+      {
+        "sheet": "PRINCESS_503_MANTENIMIENTO",
+        "ref": "AW1410",
+        "error": "#N/A"
+      },
+      {
+        "sheet": "PRINCESS_504_PLANTA_TRATTO",
+        "ref": "A596",
+        "error": "#N/A"
+      },
+      {
+        "sheet": "PALACIO_504_PLANTA_TRATTO",
+        "ref": "A596",
+        "error": "#N/A"
+      },
+      {
+        "sheet": "PALACIO_601_ACT. DE OPERACION",
+        "ref": "A596",
+        "error": "#N/A"
+      },
+      {
+        "sheet": "PRINCESS_801_SPA_ALMACEN",
+        "ref": "A596",
+        "error": "#N/A"
+      },
+      {
+        "sheet": "PALACIO_801_SPA_ALMACEN",
+        "ref": "A596",
+        "error": "#N/A"
+      }
+    ],
+    "controls": [
+      {
+        "sheet": "PRINCESS_101_ALIMENTOS",
+        "totalRow": 793,
+        "rows": 786,
+        "monthlyDetail": 26847229.38,
+        "rowTotalDetail": 26847229.23,
+        "sheetTotal": 26847229.26,
+        "sheetMonthlyTotal": 26847229.24,
+        "septemberDetail": 1376573.31,
+        "septemberControl": 1376573.28,
+        "quantityDifference": 5.820766091346741e-11
+      },
+      {
+        "sheet": "PALACIO_101_ALIMENTOS",
+        "totalRow": 751,
+        "rows": 744,
+        "monthlyDetail": 16492485.98,
+        "rowTotalDetail": 16492485.83,
+        "sheetTotal": 16492485.81,
+        "sheetMonthlyTotal": 16492485.81,
+        "septemberDetail": 818055.39,
+        "septemberControl": 818055.37,
+        "quantityDifference": 0.010000000067520887
+      },
+      {
+        "sheet": "PRINCESS_102_CARNES_MARISCOS",
+        "totalRow": 93,
+        "rows": 86,
+        "monthlyDetail": 19376933.89,
+        "rowTotalDetail": 19376933.92,
+        "sheetTotal": 19376933.89,
+        "sheetMonthlyTotal": 19376933.9,
+        "septemberDetail": 1350444.37,
+        "septemberControl": 1350444.37,
+        "quantityDifference": -4.3655745685100555e-11
+      },
+      {
+        "sheet": "PALACIO_102_CARNES_MARISCO",
+        "totalRow": 112,
+        "rows": 105,
+        "monthlyDetail": 19844784.9,
+        "rowTotalDetail": 19844784.89,
+        "sheetTotal": 19844784.91,
+        "sheetMonthlyTotal": 19844784.92,
+        "septemberDetail": 869193.3,
+        "septemberControl": 869193.3,
+        "quantityDifference": 0.010000000038417056
+      },
+      {
+        "sheet": "PRINCESS_103_FRUTAS_VERDURAS",
+        "totalRow": 334,
+        "rows": 327,
+        "monthlyDetail": 15200686.3,
+        "rowTotalDetail": 15200686.3,
+        "sheetTotal": 15200686.3,
+        "sheetMonthlyTotal": 15200686.3,
+        "septemberDetail": 915428.78,
+        "septemberControl": 915428.78,
+        "quantityDifference": 0.010000000009313226
+      },
+      {
+        "sheet": "PALACIO_103_FRUTAS_VERDURAS",
+        "totalRow": 304,
+        "rows": 297,
+        "monthlyDetail": 11060864.59,
+        "rowTotalDetail": 11060864.6,
+        "sheetTotal": 11060864.59,
+        "sheetMonthlyTotal": 11060864.59,
+        "septemberDetail": 583444.6,
+        "septemberControl": 583444.6,
+        "quantityDifference": 5.820766091346741e-11
+      },
+      {
+        "sheet": "PRINCESS_201_BEBIDAS",
+        "totalRow": 247,
+        "rows": 240,
+        "monthlyDetail": 22181412.25,
+        "rowTotalDetail": 22181412.31,
+        "sheetTotal": 22181412.25,
+        "sheetMonthlyTotal": 22181412.25,
+        "septemberDetail": 1217059.17,
+        "septemberControl": 1217059.16,
+        "quantityDifference": 0
+      },
+      {
+        "sheet": "PALACIO_201_BEBIDAS",
+        "totalRow": 169,
+        "rows": 162,
+        "monthlyDetail": 9979101.66,
+        "rowTotalDetail": 9979101.68,
+        "sheetTotal": 9979101.68,
+        "sheetMonthlyTotal": 9979101.68,
+        "septemberDetail": 636931.36,
+        "septemberControl": 636931.36,
+        "quantityDifference": 0
+      },
+      {
+        "sheet": "PRINCESS_302_PAPELERIA",
+        "totalRow": 257,
+        "rows": 250,
+        "monthlyDetail": 625692.31,
+        "rowTotalDetail": 625692.3,
+        "sheetTotal": 625692.31,
+        "sheetMonthlyTotal": 625692.31,
+        "septemberDetail": 39709.13,
+        "septemberControl": 39709.13,
+        "quantityDifference": 0
+      },
+      {
+        "sheet": "PALACIO_302_PAPELERIA",
+        "totalRow": 199,
+        "rows": 192,
+        "monthlyDetail": 220505.22,
+        "rowTotalDetail": 220505.22,
+        "sheetTotal": 220505.22,
+        "sheetMonthlyTotal": 220505.22,
+        "septemberDetail": 25826.2,
+        "septemberControl": 25826.2,
+        "quantityDifference": 0
+      },
+      {
+        "sheet": "PRINCESS_401_SUMINISTROS",
+        "totalRow": 736,
+        "rows": 729,
+        "monthlyDetail": 13831802.67,
+        "rowTotalDetail": 13831802.6,
+        "sheetTotal": 13831802.63,
+        "sheetMonthlyTotal": 13831802.63,
+        "septemberDetail": 2408038.37,
+        "septemberControl": 2408038.37,
+        "quantityDifference": 0
+      },
+      {
+        "sheet": "PALACIO_401_SUMINISTROS",
+        "totalRow": 433,
+        "rows": 426,
+        "monthlyDetail": 4890016.39,
+        "rowTotalDetail": 4890016.4,
+        "sheetTotal": 4890016.39,
+        "sheetMonthlyTotal": 4890016.39,
+        "septemberDetail": 625642.96,
+        "septemberControl": 625642.97,
+        "quantityDifference": 0
+      },
+      {
+        "sheet": "PRINCESS_403_PROD QUIMICOS",
+        "totalRow": 39,
+        "rows": 32,
+        "monthlyDetail": 3287595,
+        "rowTotalDetail": 3287595,
+        "sheetTotal": 3287595,
+        "sheetMonthlyTotal": 3287595,
+        "septemberDetail": 421566,
+        "septemberControl": 421566,
+        "quantityDifference": 0
+      },
+      {
+        "sheet": "PALACIO_403_PROD QUIMICOS",
+        "totalRow": 30,
+        "rows": 23,
+        "monthlyDetail": 621153,
+        "rowTotalDetail": 621153,
+        "sheetTotal": 621153,
+        "sheetMonthlyTotal": 621153,
+        "septemberDetail": 116548,
+        "septemberControl": 116548,
+        "quantityDifference": 0
+      },
+      {
+        "sheet": "PRINCESS_503_MANTENIMIENTO",
+        "totalRow": 1782,
+        "rows": 1775,
+        "monthlyDetail": 39602852.58,
+        "rowTotalDetail": 39602852.57,
+        "sheetTotal": 39602852.6,
+        "sheetMonthlyTotal": 39602852.61,
+        "septemberDetail": 3544793.02,
+        "septemberControl": 3544793.02,
+        "quantityDifference": -2.3283064365386963e-10
+      },
+      {
+        "sheet": "PALACIO_503_MANTENIMIENTO",
+        "totalRow": 918,
+        "rows": 911,
+        "monthlyDetail": 6951227.11,
+        "rowTotalDetail": 6951227.12,
+        "sheetTotal": 6951227.14,
+        "sheetMonthlyTotal": 6951227.13,
+        "septemberDetail": 626441.3,
+        "septemberControl": 626441.31,
+        "quantityDifference": -5.820766091346741e-11
+      },
+      {
+        "sheet": "PRINCESS_504_PLANTA_TRATTO",
+        "totalRow": 219,
+        "rows": 212,
+        "monthlyDetail": 2933416.72,
+        "rowTotalDetail": 2933416.71,
+        "sheetTotal": 2933416.7,
+        "sheetMonthlyTotal": 2933416.71,
+        "septemberDetail": 47576,
+        "septemberControl": 47576,
+        "quantityDifference": 0
+      },
+      {
+        "sheet": "PALACIO_504_PLANTA_TRATTO",
+        "totalRow": 78,
+        "rows": 71,
+        "monthlyDetail": 1525356.53,
+        "rowTotalDetail": 1525356.53,
+        "sheetTotal": 1525356.52,
+        "sheetMonthlyTotal": 1525356.52,
+        "septemberDetail": 160505.88,
+        "septemberControl": 160505.88,
+        "quantityDifference": 0
+      },
+      {
+        "sheet": "PRINCESS_601_ACT. DE OPERACION",
+        "totalRow": 685,
+        "rows": 678,
+        "monthlyDetail": 34548307.88,
+        "rowTotalDetail": 34548307.88,
+        "sheetTotal": 34548307.85,
+        "sheetMonthlyTotal": 34548307.84,
+        "septemberDetail": 3684056.55,
+        "septemberControl": 3684056.55,
+        "quantityDifference": 0
+      },
+      {
+        "sheet": "PALACIO_601_ACT. DE OPERACION",
+        "totalRow": 103,
+        "rows": 96,
+        "monthlyDetail": 2210074.93,
+        "rowTotalDetail": 2210074.93,
+        "sheetTotal": 2210074.92,
+        "sheetMonthlyTotal": 2210074.92,
+        "septemberDetail": 11825.49,
+        "septemberControl": 11825.49,
+        "quantityDifference": 0
+      },
+      {
+        "sheet": "PRINCESS_801_SPA_ALMACEN",
+        "totalRow": 78,
+        "rows": 71,
+        "monthlyDetail": 257260.46,
+        "rowTotalDetail": 257260.46,
+        "sheetTotal": 257260.46,
+        "sheetMonthlyTotal": 257260.46,
+        "septemberDetail": 0,
+        "septemberControl": 0,
+        "quantityDifference": 0
+      },
+      {
+        "sheet": "PALACIO_801_SPA_ALMACEN",
+        "totalRow": 61,
+        "rows": 54,
+        "monthlyDetail": 29802,
+        "rowTotalDetail": 29802,
+        "sheetTotal": 29802.01,
+        "sheetMonthlyTotal": 29802,
+        "septemberDetail": 861.21,
+        "septemberControl": 861.21,
+        "quantityDifference": 0
+      }
+    ],
+    "monetaryMismatches": [
+      {
+        "sheet": "PRINCESS_101_ALIMENTOS",
+        "row": 607,
+        "articulo": "349",
+        "delta": 0.020000000000436557
+      },
+      {
+        "sheet": "PALACIO_101_ALIMENTOS",
+        "row": 356,
+        "articulo": "169864",
+        "delta": 0.020000000000436557
+      },
+      {
+        "sheet": "PALACIO_101_ALIMENTOS",
+        "row": 493,
+        "articulo": "28339",
+        "delta": 0.020000000004074536
+      },
+      {
+        "sheet": "PRINCESS_201_BEBIDAS",
+        "row": 24,
+        "articulo": "27829",
+        "delta": -0.020000000004074536
+      },
+      {
+        "sheet": "PRINCESS_201_BEBIDAS",
+        "row": 48,
+        "articulo": "25311",
+        "delta": 0.020000000000436557
+      },
+      {
+        "sheet": "PRINCESS_201_BEBIDAS",
+        "row": 75,
+        "articulo": "48149",
+        "delta": -0.01999999998952262
+      }
+    ],
+    "unitChanges": [
+      {
+        "articulo": "1232",
+        "previous": "GAL",
+        "current": [
+          ""
+        ]
+      },
+      {
+        "articulo": "20270615",
+        "previous": "",
+        "current": [
+          "PZA"
+        ]
+      },
+      {
+        "articulo": "41922",
+        "previous": "",
+        "current": [
+          "PZA"
+        ]
+      },
+      {
+        "articulo": "16846",
+        "previous": "",
+        "current": [
+          "PZA"
+        ]
+      },
+      {
+        "articulo": "20270170",
+        "previous": "",
+        "current": [
+          "PZA"
+        ]
+      },
+      {
+        "articulo": "29527",
+        "previous": "",
+        "current": [
+          "PZA"
+        ]
+      },
+      {
+        "articulo": "60137",
+        "previous": "PZA",
+        "current": [
+          ""
+        ]
+      },
+      {
+        "articulo": "1376",
+        "previous": "KGR",
+        "current": [
+          ""
+        ]
+      },
+      {
+        "articulo": "20270171",
+        "previous": "",
+        "current": [
+          "PZA"
+        ]
+      },
+      {
+        "articulo": "46074",
+        "previous": "",
+        "current": [
+          "KGR"
+        ]
+      },
+      {
+        "articulo": "20270575",
+        "previous": "",
+        "current": [
+          "BOL"
+        ]
+      },
+      {
+        "articulo": "46073",
+        "previous": "",
+        "current": [
+          "KGR"
+        ]
+      },
+      {
+        "articulo": "1357",
+        "previous": "KGR",
+        "current": [
+          ""
+        ]
+      },
+      {
+        "articulo": "20270574",
+        "previous": "",
+        "current": [
+          "BOL"
+        ]
+      },
+      {
+        "articulo": "20270572",
+        "previous": "",
+        "current": [
+          "BOL"
+        ]
+      },
+      {
+        "articulo": "20270573",
+        "previous": "",
+        "current": [
+          "BOL"
+        ]
+      },
+      {
+        "articulo": "169241",
+        "previous": "",
+        "current": [
+          "BTE"
+        ]
+      },
+      {
+        "articulo": "169244",
+        "previous": "",
+        "current": [
+          "CJA"
+        ]
+      },
+      {
+        "articulo": "20270577",
+        "previous": "",
+        "current": [
+          "BOL"
+        ]
+      },
+      {
+        "articulo": "16602",
+        "previous": "",
+        "current": [
+          "PZA"
+        ]
+      },
+      {
+        "articulo": "170147",
+        "previous": "",
+        "current": [
+          "PZA"
+        ]
+      },
+      {
+        "articulo": "170152",
+        "previous": "",
+        "current": [
+          "PZA"
+        ]
+      },
+      {
+        "articulo": "170151",
+        "previous": "",
+        "current": [
+          "PZA"
+        ]
+      },
+      {
+        "articulo": "20270078",
+        "previous": "",
+        "current": [
+          "CJA"
+        ]
+      }
+    ]
+  },
+  "renderedChecks": {
+    "browser": "Edge/Chromium local",
+    "viewport": "390x844",
+    "mobileDashboardInspected": true,
+    "javascriptErrors": 0,
+    "firstLoadOfflineReady": true,
+    "offlineFolderAndIndexQuery": true,
+    "offlineHistory": true,
+    "slowNetworkFallbackMilliseconds": 4621,
+    "invalidHTMLPreservesCache": true,
+    "truncatedHTMLPreservesCache": true,
+    "gasPrincessExpectedAndShown": 10812291.81,
+    "supplierTableRows": 481,
+    "comparisonCount": 2856,
+    "historyDataPreserved": true,
+    "cacheMigration": "Activación desde offline-20261013-2 a offline-20261013-septiembre-1 y conservación de caché ajena verificadas",
+    "unverified": [
+      "Reapertura adicional después de migración: timeout del entorno",
+      "Raíz con paquete septiembre: comprobación adicional interrumpida; misma estrategia probada en versión técnica previa",
+      "GitHub Pages real",
+      "Wi-Fi y datos móviles en teléfono real",
+      "Safari/iOS e instalación"
+    ]
+  },
+  "fileHashes": {
+    "index.html": "cd518d9d431c6202f22df6f11392464d1ede89602dd0c55ec5e0c9f8f471d281",
+    "service-worker.js": "1001518715694ddd8ba20ebe131e584c0577de444d1b9a271e3f8a6aaf2d7288",
+    "manifest.webmanifest": "12caba5e428b8ff9f59d5f257b927ddb78c70d4c8eb3dfd408d2d7a6545994b0",
+    "icon.svg": "4ca883b7aa5da4dc4de4b20fe5e55a5770e3fd9dfffb23a017f8712e749995d4",
+    "icon-192.png": "9c35b64eba93dfd74708e6e484d77931d290629c874ca9e04edfb3700c66fb28",
+    "icon-512.png": "8c01480a36d22840c513f82a08e035bd56fe83a5c84b4f93d476471813dcbd16",
+    "apple-touch-icon.png": "4de5a4824520dbc6c99f3594534c21e5cb4aa29929f4e64ea73e21a776ef0b56",
+    ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}
